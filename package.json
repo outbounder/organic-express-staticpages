@@ -1,0 +1,23 @@
+{
+  "name": "organic-express-staticpages",
+  "version": "0.0.0",
+  "description": "Organelle for mounting and rendering each of expressjs views/templates within directory recursively.",
+  "main": "index.js",
+  "dependencies": {
+    "glob-stream": "~3.1.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/outbounder/organic-express-staticpages.git"
+  },
+  "author": "Boris Filipov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/outbounder/organic-express-staticpages/issues"
+  },
+  "homepage": "https://github.com/outbounder/organic-express-staticpages"
+}
