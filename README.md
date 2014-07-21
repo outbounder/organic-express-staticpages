@@ -29,7 +29,19 @@ Directory which will be 'glob'-ed with `pattern` and each file will be mounted a
 
 ### `exclude` property
 
-Every file having `exclude` contents in its path will be ignored and not mounted
+Every file having `exclude` contents in its path will be ignored and not mounted. Support array or string input. Example:
+
+    having {
+      exclude: "layouts"
+    }
+
+    will ignore files having `layouts` in its file path
+
+    haveing {
+      exclude: ["layouts", "partials"]
+    }
+
+    will ignore files having `layouts` and/or `partials` in its file path
 
 ### `emitReady` property
 
@@ -68,12 +80,18 @@ using expressjs app setup
 
     // ...
 
+    // construct organelle's container plasma
     var plasma = new (require("organic-plasma"))()
+
+    // construct organelle with dna
     require("organic-express-staticpages")(plasma, {
       "reactOn": "ExpressServer",
       "path": "context/pages",
+      "pattern": "**/*.jade",
       "log": true
     })
+
+    // trigger organelle's reaction
     plasma.emit({type: "ExpressServer", data: app})
 
     // ...

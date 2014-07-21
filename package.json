@@ -1,14 +1,20 @@
 {
   "name": "organic-express-staticpages",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Organelle for mounting and rendering each of expressjs views/templates within directory recursively.",
   "main": "index.js",
   "dependencies": {
     "glob-stream": "~3.1.11"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jade": "~1.4.2",
+    "express": "~4.6.1",
+    "mocha": "~1.20.1",
+    "organic-plasma": "0.0.3",
+    "chai": "~1.9.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
