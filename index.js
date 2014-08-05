@@ -23,14 +23,14 @@ module.exports = function(plasma, dna) {
         
         var url = file.path.split(pagesRootPath).pop()
         url = url.replace(path.extname(file.path), "")
-        var templatePath = url.replace("/", "")
+        var templatePath = path.join(pagesRootPath,url.replace("/", ""))
         if(url.split("/").pop() == "index")
           url = url.replace("index", "")
         app.get(url, function(req, res, next){
           res.render(templatePath)
         })
         if(dna.log)
-          console.log("static page", url,"->",templatePath)
+          console.log("static page", "GET", url, "->", templatePath)
         foundPages.push({
           url: url,
           templatePath: templatePath
