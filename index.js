@@ -22,7 +22,7 @@ module.exports = function(plasma, dna) {
         if(exclude(file)) return
         
         var url = file.path.split(pagesRootPath).pop()
-        url = url.replace(path.extname(file.path), "")
+        url = url.replace(path.extname(file.path), "").replace(/\\/g, "/")
         var templatePath = path.join(pagesRootPath,url.replace("/", ""))
         if(url.split("/").pop() == "index")
           url = url.replace("index", "")
