@@ -1,6 +1,6 @@
 {
   "name": "organic-express-staticpages",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Organelle for mounting and rendering each of expressjs views/templates within directory recursively.",
   "main": "index.js",
   "dependencies": {
